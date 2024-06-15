@@ -10,10 +10,27 @@ for i in range(len(days_of_the_week)):
 # Loop Condition Logic
 
 # Conditional Exit
+item = []
 
-Hottiness = 6
-while Hottiness > 5:
-    print("your to hot I can't afford you")
-    break
-else:
-    print("ok i can work with that")
+while True:
+    user_input = input("what is your desired item?: or type done when finished:")
+    if user_input == "done":
+        print(item)
+        break
+    else:
+        item.append(user_input)
+
+# Pythons's Random Game Night
+import random
+items = ["cross, holy water, stake, sword,broom"]
+computer_choice = random.choice(items)
+while True:
+    user_choice = input("Please select item, cross, holy water, stake, sword, broom:")
+    computer_choice = random.choice(items)
+    if user_choice == computer_choice:
+        print("We have a Winner!!!")
+    elif user_choice != computer_choice:
+        print("Better Luck Next Time!!!")
+    else:
+        print(input("Try Again:"))
+
